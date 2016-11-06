@@ -14,6 +14,17 @@
         $("#ejercicio10").click(function(){
           $("p.titulo").css("width","200px");
         });
+        //Ejercicio 11 Al pasar por encima de una imagen con id=”foto_34” que aparezca en otra capa “informacion” la posicion x e y, al dejar de pasar que quite esa informacion:
+        $("#foto").mousemove(function(event){
+          $("#parrafo").text("X: " + event.pageX + ", Y: " + event.pageY);
+        });
+        $("#foto").mouseleave(function(){
+      		$("#parrafo").empty();
+      	});
+        //Ejercicio 12 Para todos las capas spam y parrafos con clase “minoticia” cambiar su fondo a rojo
+        $("#ejercicio12").click(function(){
+          $("p.minoticia").css("background-color","red");
+        });
       });//ready
     </script>
     <style media="screen">
@@ -47,7 +58,15 @@
 
     <p class="titulo">dksajdlksajd</p>
     <p>dksajdlksajd</p>
-    <button id="ejercicio10">Ejercicio 10</button>
-
+    <button id="ejercicio10">Ejercicio 10</button><br><br><br>
+    <!-- Ejercicio 11 -->
+    <img src="Sintítulo.png" id="foto"/>
+    <p id="parrafo"></p><br><br>
+    <p class="minoticia">aaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaa</p>
+    <p class="minoticia">aaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaa</p>
+    <p class="minoticia">aaaaaaaaaaaaaa</p><br>
+    <button id="ejercicio12">Ejercicio 12</button><br><br><br>
   </body>
 </html>
