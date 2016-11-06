@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.1.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//Ejercicio 1 Al campo de entrada con name=”nombre” del formulario con ID “myformulario”
+				// cambiar su color de fondo a verde.
+				$("#ejercicio1").click(function() {
+			    //Para el elemento que tenga id=myformulario, busca los campos input con name="nombre y
+					// cambiar el css color a verde".
+					$("#myformulario :input[name='nombre']").css("background-color","green");
+			  });
+				//Ejercicio 2 Para todos los elementos de las listas ordenadas con la clase “listamenu”
+				// dentro de la capa con id “menu” ocultarlas.
+				$("#ejercicio2").click(function() {
+					//Para el elemento que tenga "id = menu, busca los ol con class="listamenu"
+					// y los ocultas con un retardo de 2000.
+					$("#menu ol.listamenu").hide(2000);
+				});
+				//Ejercicio 3 Para aquellos elementos de la capa con id “pie” que contengan el texto “Done by”
+				// quitar el subrayado “underline”.
+				$("#ejercicio3").click(function() {
+					//Para el elemento que tenga id=pie, busca busca el contenido 'Done By'
+					// y elimina el subrayado.
+					$("#pie :contains('Done by')").css("text-decoration","none");
+				});
+				//Ocultamos en id = misdatos, los checkbox.
+				$("#misdatos :checkbox").hide();
+				//Ejercicio 4 Al hacer click en el boton con id:”hobby” Mostrar todos los elementos checkbox del
+				// formulario con id “misdatos”.
+				$("#hobby").click(function(){
+					//Para el elemento que tenga id=misdatos, abre todos los checkbox.
+					$("#misdatos :checkbox").show();
+				});
+			});//ready
+		</script>
+	</head>
+
+	<body>
+
+		<form id="myformulario">
+		Nombre: <input type="text" name="nombre" >
+		</form>
+		<button id="ejercicio1">Ejercicio 1</button>
+
+		<div id="menu">
+			<ol class="listamenu">
+				<li>A</li>
+			    <li>B</li>
+			    <li>C</li>
+			</ol>
+		</div>
+		<button id="ejercicio2">Ejercicio 2</button>
+
+		<div id="pie">
+			<span id="texto" style="text-decoration:underline">Done b:</span><br>
+			<a href="">Done by:</a>
+		</div>
+		<button id="ejercicio3">Ejercicio 3</button>
+
+		<form id="misdatos">
+			Opcion 1: <input type="checkbox" name="opcion1"><br>
+			Opcion 2: <input type="checkbox" name="opcion2" ><br>
+			Opcion 3: <input type="checkbox" name="opcion3" >
+		</form>
+		<input type="button" id="hobby" value="Hobby">
+
+	</body>
+</html>

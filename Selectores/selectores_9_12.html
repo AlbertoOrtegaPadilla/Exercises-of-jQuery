@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        //Ejercicio 9 Para todos las celdas que estén en las filas impares de la tabla id “listado” al pasar el raton por encima añadir al final el texto “*”;
+        $("#listado tr:odd td").mouseenter(function(){
+          $(this).append("*");
+        });
+        //Ejercicio 10 Para todos los parrafos de la página con clase “titulo” cambiar el ancho a 200px
+        $("#ejercicio10").click(function(){
+          $("p.titulo").css("width","200px");
+        });
+      });//ready
+    </script>
+    <style media="screen">
+      p{
+        background-color: yellow;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="listado" border="1">
+      <tr>
+        <td>a</td><td>a</td><td>a</td><td>a</td>
+      </tr>
+      <tr>
+        <td>a</td><td>a</td><td>a</td><td>a</td>
+      </tr>
+      <tr>
+        <td>a</td><td>a</td><td>a</td><td>a</td>
+      </tr>
+      <tr>
+        <td>a</td><td>a</td><td>a</td><td>a</td>
+      </tr>
+      <tr>
+        <td>a</td><td>a</td><td>a</td><td>a</td>
+      </tr>
+      <tr>
+        <td>a</td><td>a</td><td>a</td><td>a</td>
+      </tr>
+    </table>
+
+    <p class="titulo">dksajdlksajd</p>
+    <p>dksajdlksajd</p>
+    <button id="ejercicio10">Ejercicio 10</button>
+
+  </body>
+</html>

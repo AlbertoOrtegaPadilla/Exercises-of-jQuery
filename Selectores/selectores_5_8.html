@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        //Ejercicio 5 Poner el contenido del href del enlace con id=”alumno_3” en una capa denominada con id “enlace”
+        $("#ejercicio5").click(function(){
+          $("#enlace").html($("#alumno_3").attr("href"));
+        });
+        /*$("#ejercicio5").click(function() {
+          var contenido = $("#alumno_3").attr("href");
+          $("#enlace").html(contenido);
+        });*/
+        //ejercicio 6 Al primer parrafo dentro de la capa id “micapa” cambiar su contenido y poner primero.
+        $("#ejercicio6").click(function(){
+          //first toma la primera p solamente.
+          $("#micapa p:first").html("<b>Primero</b>");
+        });
+        //Ejercicio 7 al ultimo elemento enlace dentro de la capa id  “noticias” cambiar el atributo href por “info.html”
+        $("#ejercicio7").click(function() {
+      		$("#noticias a:last").attr("href","info.html");
+      	});
+        //Ejercicio 8 Al elemento span que esta en la posicion 15 dentro de la capa con clase “noticias” cambiar su color de texto a rojo.
+      	$("#ejercicio8").click(function() {
+      		$(".noticias span:eq(14)").css("color","red");
+      	});
+        //Ejercicio 9 Para todos las celdas que estén en las filas impares de la tabla id “listado” al pasar el raton por encima añadir al final el texto “*”;
+
+      });//ready
+    </script>
+  </head>
+  <body>
+    <a id="alumno_3" href="http://www.iescampanillas.es">Alumno 3</a><br><br>
+    <div id="enlace"></div><br>
+    <button id="ejercicio5">Ejercicio 5</button>
+    <br>
+    <div id="micapa">
+      <p>Segundo</p>
+      <p>Segundo</p>
+      <p>Tercero</p>
+    </div>
+    <button id="ejercicio6">Ejercicio 6</button><br><br>
+    <div id="noticias">
+      <a href="enlace">enlace</a><br>
+      <a href="enlace1">enlace1</a><br><br>
+      <button id="ejercicio7">Ejercicio 7</button>
+    </div><br>
+    <div class="noticias">
+      <span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><br>
+      <span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><br>
+      <span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><span>a</span><br><br>
+      <button id="ejercicio8">Ejercicio 8</button>
+    </div>
+  </body>
+</html>
