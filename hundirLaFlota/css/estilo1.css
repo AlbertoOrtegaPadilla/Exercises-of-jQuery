@@ -1,0 +1,76 @@
+body{
+    background-color: black;
+    z-index: -1;
+    color:red;
+}
+#titulo{
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+}
+#contenedor{
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+    width: 95%;
+}
+#controles{
+    position: relative;
+    text-align: center;
+    top: 20px;
+    height: 50px;
+}
+#controles > * {
+    display: inline-block;
+    padding: 0 10px;
+}
+#mensaje{
+    display: block;
+    color: red;
+}
+#tablero{
+    position: relative;
+    top: 30px;
+    margin: 0 auto;
+    width: 312px;
+    height: 339px;
+    background-color: white;
+    border: 1px solid black;
+}
+#tablero > p{
+    color: red;
+    position: absolute;
+    width: 312px;
+    height: 312px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 250px;
+    text-shadow: 3px 3px 5px yellow;
+    display: none;
+    z-index: 2;
+}
+.agua{
+    background-image: url(../images/agua.png);
+    opacity: 0;
+width: 80px;
+background-repeat: no-repeat;
+height: 50px;
+}
+.barco{
+    background-image: url(../images/barco.png);
+    opacity: 0;
+width: 80px;
+background-repeat: no-repeat;
+height: 50px;
+}
+.casilla{
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    background-color: cadetblue;
+}
+td{
+  border: 1px solid black;
+}
